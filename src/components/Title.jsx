@@ -1,11 +1,3 @@
-export default function Title({massage}) {
-    
-
-    return(
-        <h2> {massage}</h2> 
-        
-    )
-
-}
-
-
+export default function Title(){
+    return (<h2>Ninjago</h2>)
+  }
