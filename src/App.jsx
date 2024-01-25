@@ -9,9 +9,9 @@ function App() {
 
 
 
-  function Header(){
+    function Header(){
     return(
-      <header>
+        <header>
             <img id="logo" src="website_images/LD_logo.svg" alt="LEGOdudes nettbutikk" />
             <button id="carttoggle">
                 <span id="cartcount">99</span>
@@ -40,9 +40,9 @@ function App() {
             </section>
         </header>
     )
-  }
+    }
 
-  return (
+    return (
     <div id="container">
         <Header/>
         <nav>
@@ -55,11 +55,11 @@ function App() {
             </ul>
         </nav>
         <main>
-          <Title />
-          {products.map(product => <ProductCard key={product.prodid} category={product.category} title={product.title} img={product.imagefile} price={product.price}/> )}
+            <Title />
+            {products.map(product => <ProductCard key={product.prodid} category={product.category} title={product.title} img={product.imagefile} price={product.price}/> )}
         </main>
     </div>
-  )
+    )
 
 }
 
