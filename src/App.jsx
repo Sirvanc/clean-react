@@ -1,16 +1,57 @@
 import { useState } from 'react'
+<<<<<<< Updated upstream
 import LD_Logo from '/website_images/LD_Logo.svg'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 <<<<<<< HEAD
+=======
+import './App.css'
+import { products } from './assets/legoduds'
+>>>>>>> Stashed changes
 import Title from './components/Title'
+import ProductCard from './components/ProductCard'
 
 function App() {
-  const [count, setCount] = useState(0)
-  let massage = "Hello World"
+
+
+
+
+  function Header(){
+    return(
+      <header>
+            <img id="logo" src="website_images/LD_logo.svg" alt="LEGOdudes nettbutikk" />
+            <button id="carttoggle">
+                <span id="cartcount">99</span>
+                <img id="carticon" src="website_images/legocart.svg" alt="Din handlevogn" />
+            </button>
+            <section id="cart">
+                <h2>Din handlevogn</h2>
+                <ul id="cartlist">
+                    <li>
+                        <span className="title">Produkttittel</span>
+                        <span className="price">89,-</span>
+                        <span className="quantity">x1</span>
+                        <span className="functions">
+                            <button>X</button>
+                        </span>
+                    </li>
+                    <li>
+                        <span className="title">Wengestone warriors</span>
+                        <span className="price">9989,-</span>
+                        <span className="quantity">x333</span>
+                        <span className="functions">
+                            <button>X</button>
+                        </span>
+                    </li>
+                </ul>
+            </section>
+        </header>
+    )
+  }
 
   return (
+<<<<<<< Updated upstream
     <>
       <div>
         <a href="https://vitejs.dev" target="_blank">
@@ -73,6 +114,10 @@ function App() {
                 </ul>
             </section>
         </header>
+=======
+    <div id="container">
+        <Header/>
+>>>>>>> Stashed changes
         <nav>
             <ul>
                 <li><a href="#">City</a></li>
@@ -82,6 +127,7 @@ function App() {
                 <li><a href="#">Movie Characters</a></li>
             </ul>
         </nav>
+<<<<<<< Updated upstream
       <main>
         <h2> Ninjago</h2>
         <article>
@@ -96,7 +142,15 @@ function App() {
         </main>
     </div>
 >>>>>>> ee44acc118dfee5cd2d9932d9d4f88ffbaa46d32
+=======
+        <main>
+          <Title />
+          {products.map(product => <ProductCard key={product.prodid} category={product.category} title={product.title} img={product.imagefile} price={product.price}/> )}
+        </main>
+    </div>
+>>>>>>> Stashed changes
   )
+
 }
 
 export default App
