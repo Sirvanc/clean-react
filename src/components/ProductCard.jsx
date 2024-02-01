@@ -1,8 +1,8 @@
 export default function ProductCard({ category, img, title, price, amount, setAmount }) {
   
   const handleClick = () => {
-    setAmount((prev) => prev +1)
-
+    setAmount(prev => prev + 1)
+  }
     return(
       <article>
         <img src={"website_images/PROD_"+img} alt={title} />
@@ -12,5 +12,5 @@ export default function ProductCard({ category, img, title, price, amount, setAm
         <button onClick={handleClick}>Legg i handlekurv</button>
       </article>
     )
-  }
-  }
+}
+  
