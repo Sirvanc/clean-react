@@ -3,19 +3,10 @@
 
 $colorBlue: #fff;
 
-body {
+
+body{
     background-color: $colorBlue;
 
 
-    header{
-        nav{
-            ul{
-                list-style: none;
-                display: flex;
-                gap: 1rem;
 
-            }
-        }
-    }
-
-    };
+}

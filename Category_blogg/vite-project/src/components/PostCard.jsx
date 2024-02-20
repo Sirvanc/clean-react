@@ -1,16 +1,12 @@
-import { Link } from "react-router-dom"
-import { posts } from "../assets/posts"
+import { Link } from "react-router-dom";
 
-export default function PostCard({ title, category, ingres, id }) {
-
-    return (
+export default function PostCard({title, category, ingress, id}){
+    return(
         <article>
             <h3>{title}</h3>
-            <p>{ingres}</p>
+            <p>{ingress}</p>
             <Link to="">{category}</Link>
-            <Link to="">{JSON:}</Link>
-            
+            <Link to={JSON.stringify(id)}>Read more</Link>
         </article>
     )
-    
 }

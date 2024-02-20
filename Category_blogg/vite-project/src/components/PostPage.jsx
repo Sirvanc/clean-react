@@ -1,16 +1,17 @@
-import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
+import { posts } from "../assets/posts"
+import { useEffect, useState } from "react"
 
-export default function PostPage() {
-    const { slug, postid } = useParams()
+export default function PostPage(){
+    const {slug, postid} = useParams()
 
-    cosnt[currentPost, setCurrentPost] = useState()
-    
-    useEffect(() => {
-        setCurrentCategory(post?.filter(post=> post.category === slug))
+    const [currentCategory, setCurrentCategory] = useState()
+
+    useEffect(()=>{
+        setCurrentCategory(posts?.filter(post=> post.category === slug))
     },[])
-    
-    console.log (setCurrentCategory?.filter(item => JSON.stringify(item.id) === postid))
 
-    return <h1> Post Page</h1>
+    console.log(currentCategory?.filter(item => JSON.stringify(item.id) === postid))
+
+    return <h1>Post Page</h1>
 }

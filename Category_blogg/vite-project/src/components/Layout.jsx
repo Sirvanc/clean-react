@@ -1,24 +1,20 @@
-import { Children } from "react";
 import { Link } from "react-router-dom";
 
-export default function Layout() {{Children}
-    
-    return (
+export default function Layout({children}){
+    return(
         <>
-            <header>
-                <nav>
-                    <ul>
-                        <li>>Link to=</li>
-                    </ul>
-                </nav>
-            </header>
-            <main>
-                
-            </main>
-            {Children}
-            <footer>Footer</footer>
+        <header>
+            <nav>
+                <ul>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="categories">Categories</Link></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+        {children}
+        </main>
+        <footer>Footer</footer>
         </>
     )
 }
-
-export default Layout;

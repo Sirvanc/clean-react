@@ -1,18 +1,11 @@
-export default function Categories() {
+import { Link, Outlet } from "react-router-dom"
 
-    const categorysArray = ["", "", "", ]
-    
+export default function Categories(){
+
     return (
         <>
-            <h1>Categories</h1>
-
-            <ul>
-
-                {categorysArray.map(Categor)} => <li></li>
-
-            </ul>
+            <Outlet />
         </>
-        
-
+    
     )
 }
