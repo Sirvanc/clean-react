@@ -12,6 +12,9 @@ export default function Layout() {{Children}
                     </ul>
                 </nav>
             </header>
+            <main>
+                
+            </main>
             {Children}
             <footer>Footer</footer>
         </>

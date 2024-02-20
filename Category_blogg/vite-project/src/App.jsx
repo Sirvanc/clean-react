@@ -3,7 +3,8 @@ import './App.css'
 import Home  from '/'
 import Categories from './components/Categories'
 import Layout from './components/Layout'
-import 
+import postes from './assets/posts'
+import PostPage from './components/PostPage'
 
 function App() {
 
@@ -16,7 +17,7 @@ function App() {
         <Route path="categories/*" element={<Categories />} />
         <Route index element= { <Categoriesindex/>}/>
         <Route path=":slug" element={<Category />} /> 
-        
+        <Route path=':slug/:postid' elemet={<PostPage />} />
       
       </Routes>  
     </Layout>
