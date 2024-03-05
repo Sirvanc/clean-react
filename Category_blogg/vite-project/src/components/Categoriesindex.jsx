@@ -1,27 +1,27 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
-export default function CategoriesIndex(content) {
-    
-    console.log("sjekk", content)
-    const [search, setSarch] = useState("")
-    
-    const handleSumbit = (e) => {
-        e.preventDefault()
-        setQuery(serach)
+export default function CategoriesIndex({content, setQuery}){
+    const [search, setSearch] = useState("")
 
+    const handleSubmit = (e)=>{
+        e.preventDefault()
+        setQuery(search)
     }
+
+    const handleChange = (event)=>{
+        setSearch(event.target.value)
+    }
+
+    console.log("S", search)
     
-    const handelChamge =()
     return(
     <>
-            <h1>Characters</h1>
-            <form>
-                <form onSubmit={handleSumbit}
-                <label htmlFor="search"> Søk etter karakter:</label>
-                <input type="text" id="serarch" placeholder="Rick..."></input>
-                <input type="text" id="serarch" placeholder="Rick..."></input>
-                <input type="sumbit"
-            </form>
+        <h1>Characters</h1>
+        <form onSubmit={handleSubmit}>
+            <label htmlFor="search">Søk etter karakter:</label>
+            <input type="text" id="search" placeholder="Rick..." onChange={handleChange}></input>
+            <input type="submit" value="Søk"></input>
+        </form>
         <ul className="category-list">
             {content?.map(item => <li key={item.id}><Link to={item.name}>{item.name}</Link></li>)}
         </ul>
